@@ -5,8 +5,7 @@ $password = ""; // Your MySQL password
 
 try {
     // Create a connection to the MySQL server
-    $conn = new PDO("mysql:host=$servername", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conn = new PDO("mysql:host=$servername;dbname=Users", $username, $password);    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // SQL to create the database
     $sql = "CREATE DATABASE IF NOT EXISTS Users";
@@ -32,6 +31,5 @@ try {
     echo "Error: " . $e->getMessage();
 }
 
-// Close the connection
-$conn = null;
+
 ?>

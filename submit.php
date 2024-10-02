@@ -1,20 +1,36 @@
 <?php
 include 'dbconnect.php';
 
-
-$firstName = $conn->real_escape_string($_POST['firstname']);
-$lastName = $conn->real_escape_string($_POST['lastname']);
-$username = $conn->real_escape_string($_POST['username']);
-$email = $conn->real_escape_string($_POST['email']);
-$state = $conn->real_escape_string($_POST['emotion']);
-
-
-$sql = "INSERT INTO users (firstname, lastname, username, email, emotion) VALUES ('$firstName', '$lastName', '$username', '$email', '$emotion')";
-
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+if ($conn === null) {
+    echo 'Connection failed';
+    exit();
 }
 
-$conn->close();
+$firstName = $_POST['firstname'];
+$lastName = $_POST['lastname'];
+$username = $_POST['username'];
+$email = $_POST['email'];
+$emotion = $_POST['emotion'];
+
+$sql = "INSERT INTO UserDetails (firstname, lastname, username, email, emotion) VALUES (:firstName, :lastName, :username, :email, :emotion)";
+
+try {
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':firstName', $firstName);
+    $stmt->bindParam(':lastName', $lastName);
+    $stmt->bindParam(':username', $username);
+    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':emotion', $emotion);
+
+    if ($stmt->execute()) {
+        // Redirect to the homepage after successful insertion
+        header("Location: index.php"); // Change 'index.php' to your actual homepage file
+        exit();
+    } else {
+        echo "Error: " . $stmt->errorInfo()[2];
+    }
+} catch (PDOException $e) {
+    echo 'Error: ' . $e->getMessage();
+}
+
+$conn = null;

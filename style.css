@@ -285,3 +285,37 @@ header{
     font-size: 300%;
     text-align: center;
 }
+
+.welcomecontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+      
+}
+
+.welcomecontainer h1{
+    font-size: 3rem;
+    color: #97be80;
+    font-family: Bebas Neue, sans-serif;
+    text-align: center;
+}
+.welcomecontainer p{
+    font-size: 1.5rem;
+    color: #b2c8a5;
+    font-family: Bebas Neue, sans-serif;
+    text-align: center;
+}
+.welcomemain{
+    background: url(plant.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    
+}

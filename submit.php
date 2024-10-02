@@ -12,6 +12,8 @@ $username = $_POST['username'];
 $email = $_POST['email'];
 $emotion = $_POST['emotion'];
 
+session_start(); // Start the session here
+
 $sql = "INSERT INTO UserDetails (firstname, lastname, username, email, emotion) VALUES (:firstName, :lastName, :username, :email, :emotion)";
 
 try {
@@ -23,8 +25,9 @@ try {
     $stmt->bindParam(':emotion', $emotion);
 
     if ($stmt->execute()) {
+        $_SESSION['username'] = $username; // Store the username in the session here
         // Redirect to the homepage after successful insertion
-        header("Location: index.php"); // Change 'index.php' to your actual homepage file
+        header("Location: welcome.php"); // Change 'index.php' to your actual homepage file
         exit();
     } else {
         echo "Error: " . $stmt->errorInfo()[2];

@@ -1,4 +1,309 @@
-*{
-    margin: 0;
-    padding: 0;
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.butterimg{
+height: 50px;
 }
+
+.navbar-toggler{
+    outline: none !important;
+    padding: 0 !important;
+}
+
+.nav-link {
+    color: #556729 !important;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-right: 20px;
+}
+.navbar-brand{
+    color: #3C4819 !important;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+.wrapper {
+    margin: 50px auto;
+    border-radius: 15px;
+    padding: 70px;
+    box-shadow: 0 0 40px 2px rgba(37, 73,214,0.18);
+    background: url(paper.png);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row; /* Ensure items are arranged horizontally */
+}
+
+.feature-box {
+    flex: 1;
+    padding: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.feature-box h1 {
+    margin-top: 50px;
+    color: #607f4e;
+    font-family: Bebas Neue, sans-serif;
+    font-size: 3rem;
+    text-align: left;
+}
+
+
+button {
+    position: relative;
+    padding: 13px 40px;
+    background: #f5ddb7;
+    font-size: 17px;
+    font-weight: 900;
+    color:#607f4e;
+    border: none;
+    border-radius: 8px;
+    margin-top: 50px;
+    margin-right: 50px;
+    box-shadow: 2px 2px 5px #18181869, inset 2px 2px 10px #ffffffb0;
+    transition: all .3s ease-in-out;
+    font-family: Bebas Neue, sans serif;
+    align-self: flex-start;
+    transform: translateY(50px); 
+}
+  
+  .icon-1 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0px;
+    height: auto;
+    transition: all .5s ease-in-out;
+    z-index: -1;
+  }
+  
+  .icon-2 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0px;
+    height: auto;
+    transition: all .5s ease-in-out;
+    z-index: -2;
+  }
+  
+  .icon-3 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0px;
+    height: auto;
+    transition: all .5s ease-in-out;
+    z-index: -2;
+  }
+  
+  .icon-4 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0px;
+    height: auto;
+    transition: all .5s ease-in-out;
+    z-index: -2;
+  }
+  
+  .icon-5 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0px;
+    height: auto;
+    transition: all .5s ease-in-out;
+    z-index: -2;
+  }
+  
+  button:hover {
+    padding: 13px 25px;
+    border-radius: 8px 8px 24px 24px;
+  }
+  
+  button:hover .icon-1 {
+    top: -250%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 50px;
+    height: auto;
+    animation: inIcon1 3s ease .45s forwards;
+  }
+  
+  @keyframes inIcon1 {
+    0% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(0deg);
+    }
+  
+    25% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(5deg);
+    }
+  
+    50% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(1deg);
+    }
+  
+    65% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(3deg);
+    }
+  
+    100% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(0deg);
+    }
+  }
+  
+  button:hover .icon-2 {
+    position: absolute;
+    top: -200%;
+    left: 90%;
+    transform: translate(-50%, 0);
+    width: 75px;
+    height: auto;
+    animation: inIcon2 1s ease .45s forwards;
+  }
+  
+  @keyframes inIcon2 {
+    0% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(0deg);
+    }
+  
+    35% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(10deg);
+    }
+  
+    50% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(4deg);
+    }
+  
+    80% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(5deg);
+    }
+  
+    100% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(0deg);
+    }
+  }
+  
+  button:hover .icon-3 {
+    position: absolute;
+    top: -130%;
+    left: 20%;
+    transform: translate(-50%, 0);
+    width: 60px;
+    height: auto;
+    animation: inIcon3 1s ease .45s forwards;
+  }
+  
+  @keyframes inIcon3 {
+    0% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(0deg);
+    }
+  
+    35% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(-2deg);
+    }
+  
+    100% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(0deg);
+    }
+  }
+  
+  button:hover .icon-4 {
+    position: absolute;
+    top: -300%;
+    left: 10%;
+    transform: translate(-50%, 0);
+    width: 85px;
+    height: auto;
+    animation: inIcon4 1s ease .45s forwards;
+  }
+  
+  @keyframes inIcon4 {
+    0% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(0deg);
+    }
+  
+    40% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(-3deg);
+    }
+  
+    100% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(0deg);
+    }
+  }
+  
+  button:hover .icon-5 {
+    position: absolute;
+    top: -350%;
+    left: 90%;
+    transform: translate(-50%, 0);
+    width: 85px;
+    height: auto;
+    animation: inIcon5 1s ease .45s forwards;
+  }
+  
+  @keyframes inIcon5 {
+    0% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(0deg);
+    }
+  
+    35% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(-3deg);
+    }
+  
+    100% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(0deg);
+    }
+  }
+  
+  .fil-leaf-1 {
+    fill: #7B9B3A
+  }
+  
+  .fil-leaf-2 {
+    fill: #556729;
+    fill-rule: nonzero
+  }
+  
+  .fil-leaf-3 {
+    fill: #556729
+  }
+  
+  .fil-leaf-4 {
+    fill: #3C4819
+  }
+  
+  .fil-leaf-5 {
+    fill: #3C4819
+  }

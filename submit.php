@@ -43,15 +43,15 @@ try {
             $mail->isSMTP();
             $mail->Host       = 'smtp.gmail.com'; 
             $mail->SMTPAuth   = true;
-            $mail->Username   = 'ritararin@gmail.com'; // Your SMTP username
-            $mail->Password   = 'rqbq bdjt ysop bvkh'; // Your correct app-specific password
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Use TLS
-            $mail->Port       = 587; // TCP port to connect to
-            $mail->SMTPDebug = 2; // Enable verbose debug output
+            $mail->Username   = 'ritararin@gmail.com'; 
+            $mail->Password   = 'rqbq bdjt ysop bvkh'; 
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
+            $mail->Port       = 587;
+            $mail->SMTPDebug = 2; 
 
             // Recipients
-            $mail->setFrom('your_email@gmail.com', 'Your Name'); // Sender info
-            $mail->addAddress($email); // Add the user's email
+            $mail->setFrom('your_email@gmail.com', 'Your Name'); 
+            $mail->addAddress($email); 
 
             // Content
             $mail->isHTML(true);
